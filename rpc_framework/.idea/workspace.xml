@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="">
+    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="目前已做：&#10;引入了依赖包&#10;配置了环境">
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
@@ -66,6 +66,14 @@
       <option name="presentableId" value="Default" />
       <updated>1687932935358</updated>
     </task>
+    <task id="LOCAL-00001" summary="目前已做：&#10;引入了依赖包&#10;配置了环境">
+      <created>1687934586803</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687934586803</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -78,5 +86,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="目前已做：&#10;引入了依赖包&#10;配置了环境" />
+    <option name="LAST_COMMIT_MESSAGE" value="目前已做：&#10;引入了依赖包&#10;配置了环境" />
   </component>
 </project>

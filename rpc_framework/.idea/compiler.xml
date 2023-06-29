@@ -7,15 +7,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="zk_client" />
-        <module name="zk_server" />
         <module name="rpc_zk" />
+        <module name="zk_client" />
+        <module name="rpc_easy_framework" />
+        <module name="rpc_api" />
+        <module name="zk_server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="commons" target="1.8" />
+      <module name="service" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="commons" options="-parameters" />
+      <module name="rpc_api" options="-parameters" />
+      <module name="rpc_easy_framework" options="-parameters" />
       <module name="rpc_zk" options="-parameters" />
+      <module name="service" options="-parameters" />
       <module name="zk_client" options="-parameters" />
       <module name="zk_server" options="-parameters" />
     </option>

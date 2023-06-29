@@ -5,49 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="目前已做：&#10;引入了依赖包&#10;配置了环境">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_api/src/main/java/com/qjj/service/HelloService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_api/src/main/java/com/qjj/service/impl/HelloServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_api/target/classes/com/qjj/service/HelloService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_api/target/classes/com/qjj/service/impl/HelloServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_api/target/test-classes/com/qjj/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_easy_framework/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_easy_framework/src/main/java/com/qjj/RpcFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_easy_framework/src/main/java/com/qjj/connection/ZkConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_easy_framework/src/main/java/com/qjj/registry/RpcRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_easy_framework/target/classes/com/qjj/RpcFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_easy_framework/target/classes/com/qjj/connection/ZkConnection$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_easy_framework/target/classes/com/qjj/connection/ZkConnection.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_easy_framework/target/classes/com/qjj/registry/RpcRegistry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/rpc_easy_framework/target/test-classes/com/qjj/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_client/src/main/java/com/qjj/TestRpcClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_client/src/main/resources/rpc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_client/src/test/java/com/qjj/TestZookeeper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_client/target/classes/com/qjj/TestRpcClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_client/target/classes/rpc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_client/target/test-classes/com/qjj/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_client/target/test-classes/com/qjj/TestZookeeper$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_client/target/test-classes/com/qjj/TestZookeeper$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_client/target/test-classes/com/qjj/TestZookeeper$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_client/target/test-classes/com/qjj/TestZookeeper$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_client/target/test-classes/com/qjj/TestZookeeper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_server/src/main/java/com/qjj/ServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_server/src/main/resources/rpc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_server/target/classes/com/qjj/ServerApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_server/target/classes/rpc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_zk/zk_server/target/test-classes/com/qjj/AppTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_api/src/main/java/com/qjj/HelloServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_api/src/main/java/com/qjj/service/HelloService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_api/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_client/src/main/java/com/qjj/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_client/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service/src/main/java/com/qjj/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service/src/test/java/com/qjj/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_zk/zk_client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_zk/zk_client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_zk/zk_client/src/main/java/com/qjj/zk/TestZookeeper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_zk/zk_client/src/test/java/com/qjj/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_zk/zk_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_zk/zk_server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_zk/zk_server/src/test/java/com/qjj/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +29,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -85,7 +57,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.18735632",
-    "settings.editor.selected.configurable": "fileTemplates"
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -254,5 +226,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

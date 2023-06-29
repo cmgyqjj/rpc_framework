@@ -10,9 +10,9 @@
     <module>rpc_zk</module>
     <module>rpc_zk/zk_client</module>
     <module>rpc_zk/zk_server</module>
-      <module>rpc_zk/commons</module>
       <module>rpc_zk/rpc_easy_framework</module>
       <module>rpc_zk/rpc_api</module>
+    <module>rpc_qjj</module>
   </modules>
 
   <name>rpc_framework</name>

@@ -5,13 +5,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/rpc_tl/pom.xml" />
+        <option value="$PROJECT_DIR$/rpc_qjj/rpc_qjj_framework/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/rpc_qjj/rpc_qjj_common/pom.xml" />
-        <option value="$PROJECT_DIR$/rpc_zk/commons/pom.xml" />
-        <option value="$PROJECT_DIR$/rpc_zk/service/pom.xml" />
+        <option value="$PROJECT_DIR$/rpc_qjj/pom.xml" />
       </set>
     </option>
   </component>

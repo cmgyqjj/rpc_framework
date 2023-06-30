@@ -7,19 +7,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="rpc_qjj_api" />
         <module name="zk_client" />
         <module name="rpc_api" />
-        <module name="rpc_qjj_service" />
+        <module name="rpc_tul_framework" />
         <module name="rpc_zk" />
-        <module name="rpc_qjj_client" />
         <module name="rpc_easy_framework" />
+        <module name="rpc_tul_client" />
+        <module name="rpc_tul" />
+        <module name="rpc_tul_api" />
         <module name="zk_server" />
+        <module name="rpc_tul_service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="commons" target="1.8" />
+      <module name="rpc_qjj" target="1.8" />
+      <module name="rpc_qjj_api" target="1.8" />
+      <module name="rpc_qjj_client" target="1.8" />
       <module name="rpc_qjj_common" target="1.8" />
+      <module name="rpc_qjj_framework" target="1.8" />
+      <module name="rpc_qjj_service" target="1.8" />
+      <module name="rpc_tl_api" target="1.8" />
+      <module name="rpc_tl_client" target="1.8" />
+      <module name="rpc_tl_service" target="1.8" />
       <module name="service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -32,7 +42,16 @@
       <module name="rpc_qjj_api" options="-parameters" />
       <module name="rpc_qjj_client" options="-parameters" />
       <module name="rpc_qjj_common" options="-parameters" />
+      <module name="rpc_qjj_framework" options="-parameters" />
       <module name="rpc_qjj_service" options="-parameters" />
+      <module name="rpc_tl_api" options="-parameters" />
+      <module name="rpc_tl_client" options="-parameters" />
+      <module name="rpc_tl_service" options="-parameters" />
+      <module name="rpc_tul" options="-parameters" />
+      <module name="rpc_tul_api" options="-parameters" />
+      <module name="rpc_tul_client" options="-parameters" />
+      <module name="rpc_tul_framework" options="-parameters" />
+      <module name="rpc_tul_service" options="-parameters" />
       <module name="rpc_zk" options="-parameters" />
       <module name="service" options="-parameters" />
       <module name="zk_client" options="-parameters" />

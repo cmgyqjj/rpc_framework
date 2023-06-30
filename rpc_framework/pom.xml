@@ -12,7 +12,11 @@
     <module>rpc_zk/zk_server</module>
       <module>rpc_zk/rpc_easy_framework</module>
       <module>rpc_zk/rpc_api</module>
-    <module>rpc_qjj</module>
+    <module>rpc_tul</module>
+    <module>rpc_tul/rpc_tul_api</module>
+    <module>rpc_tul/rpc_tul_client</module>
+    <module>rpc_tul/rpc_tul_framework</module>
+    <module>rpc_tul/rpc_tul_service</module>
   </modules>
 
   <name>rpc_framework</name>

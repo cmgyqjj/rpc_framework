@@ -4,21 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="目前已做：&#10;引入了依赖包&#10;配置了环境">
-      <change afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_qjj/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_api/src/main/java/com/qjj/HelloServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_api/src/main/java/com/qjj/service/HelloService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_api/src/test/java/com/qjj/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_client/src/main/java/com/qjj/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_client/src/test/java/com/qjj/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service/src/main/java/com/qjj/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="自造论子手写rpc思路">
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_client/src/main/java/com/qjj/RpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_framework/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_framework/src/main/java/com/qjj/common/Invocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_framework/src/main/java/com/qjj/protocol/DispatcherServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_framework/src/main/java/com/qjj/protocol/HttpClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_framework/src/main/java/com/qjj/protocol/HttpServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_framework/src/main/java/com/qjj/protocol/HttpServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_framework/src/main/java/com/qjj/register/LocalRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_framework/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service/src/main/java/com/qjj/RpcServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service/src/main/java/com/qjj/service/impl/HelloServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_api/src/main/java/com/qjj/service/HelloService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_api/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_client/src/main/java/com/qjj/RpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_client/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/common/Invocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/protocol/DispatcherServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/protocol/HttpClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/protocol/HttpServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/protocol/HttpServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/register/LocalRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_service/src/main/java/com/qjj/RpcServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_service/src/main/java/com/qjj/service/impl/HelloServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_service/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_qjj/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_qjj/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_api/src/main/java/com/qjj/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_api/src/main/java/com/qjj/service/HelloServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_client/src/main/java/com/qjj/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service/src/main/java/com/qjj/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_zk/rpc_api/target/test-classes/com/qjj/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_zk/rpc_easy_framework/target/test-classes/com/qjj/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_zk/zk_client/target/test-classes/com/qjj/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_zk/zk_server/target/test-classes/com/qjj/AppTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +62,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,12 +73,19 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2Rp2vrB9CRKFSHgfEYDWFJJSnYj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -53,28 +94,38 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "/Users/qiingjiajun/git project/rpc/rpc_framework/rpc_framework/rpc_zk/zk_client/src/main",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
+    "last_opened_file_path": "/Users/qiingjiajun/git project/rpc/rpc_framework/rpc_framework/rpc_tul/rpc_tul_api/src/main/java/com",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.18735632",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.qjj.protocol" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/rpc_zk/zk_client/src/main" />
-      <recent name="$PROJECT_DIR$/rpc_zk/zk_server/src/main" />
-      <recent name="$PROJECT_DIR$/rpc_zk/zk_server/src/main/java" />
-      <recent name="$PROJECT_DIR$/rpc_zk/rpc_easy_framework/src/main" />
+      <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_api/src/main/java/com" />
+      <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java" />
+      <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_service/src" />
+      <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_service/src/main" />
+      <recent name="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service1/src/main" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.qjj" />
+      <recent name="com.qjj.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qjj" />
+      <recent name="com.qjj.service.impl" />
+      <recent name="com.qjj.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ServerApplication (1)">
-    <configuration name="ServerApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qjj.ServerApplication" />
-      <module name="zk_server" />
+  <component name="RunManager" selected="Application.RpcClient">
+    <configuration name="RpcClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qjj.RpcClient" />
+      <module name="rpc_tul_client" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.qjj.*" />
@@ -85,12 +136,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qjj.ServerApplication" />
-      <module name="rpc_api" />
+    <configuration name="RpcServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qjj.RpcServer" />
+      <module name="rpc_tul_service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.qjj.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RpcServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qjj.RpcServer" />
+      <module name="rpc_qjj_service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qjj.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qjj.ServerApplication" />
+      <module name="zk_server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qjj.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,7 +180,7 @@
       <module name="zk_client" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qjj.*" />
+          <option name="PATTERN" value="com.qjj.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,39 +214,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestZookeeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qjj.TestZookeeper" />
-      <module name="zk_client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.qjj.connection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qjj.zk.test" />
-      <module name="zk_client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.qjj.connection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RpcClient" />
+        <item itemvalue="Application.RpcServer (1)" />
+        <item itemvalue="Application.RpcServer" />
         <item itemvalue="Application.TestRpcClient" />
         <item itemvalue="Application.ServerApplication (1)" />
-        <item itemvalue="Application.ServerApplication" />
-        <item itemvalue="Application.TestZookeeper" />
-        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687934586803</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="自造论子手写rpc思路">
+      <created>1688040346041</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688040346041</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,7 +263,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="目前已做：&#10;引入了依赖包&#10;配置了环境" />
-    <option name="LAST_COMMIT_MESSAGE" value="目前已做：&#10;引入了依赖包&#10;配置了环境" />
+    <MESSAGE value="自造论子手写rpc思路" />
+    <option name="LAST_COMMIT_MESSAGE" value="自造论子手写rpc思路" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

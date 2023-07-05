@@ -13,14 +13,14 @@ public class Invocation implements Serializable {
     private String methodName;
     private Class[] parametersType;
     private Object[] parameters;
-    private String version;
+//    private String version;
 
-    public Invocation(String interfaceName, String methodName, Class[] parametersType, Object[] parameters, String version) {
+    public Invocation(String interfaceName, String methodName, Class[] parametersType, Object[] parameters) {
         this.interfaceName = interfaceName;
         this.methodName = methodName;
         this.parametersType = parametersType;
         this.parameters = parameters;
-        this.version = version;
+//        this.version = version;
     }
 
     public String getInterfaceName() {
@@ -55,11 +55,11 @@ public class Invocation implements Serializable {
         this.parameters = parameters;
     }
 
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
+//    public String getVersion() {
+//        return version;
+//    }
+//
+//    public void setVersion(String version) {
+//        this.version = version;
+//    }
 }

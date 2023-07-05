@@ -3,6 +3,7 @@ package com.qjj;
 
 import com.qjj.common.Invocation;
 import com.qjj.protocol.HttpClient;
+import com.qjj.proxy.ProxyFactory;
 import com.qjj.service.HelloService;
 
 /**
@@ -14,11 +15,8 @@ import com.qjj.service.HelloService;
 public class RpcClient {
 
     public static void main(String[] args) {
-        Invocation invocation = new Invocation(HelloService.class.getName(), "hello",
-                new Class[]{String.class}, new Object[]{"qjj"}, "1.0");
-        HttpClient httpClient = new HttpClient();
-        String result = httpClient.send("localhost", 7070, invocation);
+        HelloService helloService = ProxyFactory.getProxy(HelloService.class);
+        String result = helloService.hello("qjj");
         System.out.println(result);
-
     }
 }

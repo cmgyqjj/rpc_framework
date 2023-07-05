@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="图灵rpc">
-      <change afterPath="$PROJECT_DIR$/rpc_tul/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/common/URL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/loadbalance/LoadBalance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/proxy/ProxyFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/register/MapRemoteRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/temp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_tul/rpc_tul_client/src/main/java/com/qjj/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_client/src/main/java/com/qjj/RpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/common/Invocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/common/Invocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_tul/rpc_tul_service/src/main/java/com/qjj/RpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_service/src/main/java/com/qjj/RpcServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/proxy/ProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/proxy/ProxyFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +83,7 @@
     <configuration name="RpcClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.qjj.RpcClient" />
       <module name="rpc_tul_client" />
+      <option name="VM_PARAMETERS" value="-Dmock=return:123123123123" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.qjj.loadbalance.*" />
@@ -180,6 +172,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.RpcClient" />
+      <item itemvalue="Application.RpcServer" />
+      <item itemvalue="Application.ServerApplication" />
+      <item itemvalue="Application.TestRpcClient" />
+      <item itemvalue="Application.TestZookeeper (1)" />
+      <item itemvalue="Application.TestZookeeper (2)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.RpcClient" />
@@ -218,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688114832283</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="图灵rpc">
+      <created>1688570046732</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688570046732</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,7 +243,8 @@
     <MESSAGE value="目前已做：&#10;引入了依赖包&#10;配置了环境" />
     <MESSAGE value="自造论子手写rpc思路" />
     <MESSAGE value="图灵rpc框架思路" />
-    <option name="LAST_COMMIT_MESSAGE" value="图灵rpc框架思路" />
+    <MESSAGE value="图灵rpc" />
+    <option name="LAST_COMMIT_MESSAGE" value="图灵rpc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -260,11 +268,21 @@
           <line>60</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/proxy/ProxyFactory.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/rpc_framework$RpcClient.ic" NAME="RpcClient Coverage Results" MODIFIED="1688570794321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.qjj.loadbalance.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -25,6 +25,14 @@ public class ProxyFactory {
         Object proxyInstance = Proxy.newProxyInstance(interfaceClass.getClassLoader(), new Class[]{interfaceClass}, new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+//                服务Mock的实现
+//                mock就是解决了开发前端时没有后端支持，开发接口时依赖没有到位的尴尬场景等。
+                String mock = System.getProperty("mock");
+                if(mock!=null&&mock.startsWith("return:")){
+                    String result=mock.replace("return:","");
+                    return result;
+                }
+
                 Invocation invocation = new Invocation(interfaceClass.getName(), method.getName(),
                         method.getParameterTypes(), args);
                 HttpClient httpClient = new HttpClient();

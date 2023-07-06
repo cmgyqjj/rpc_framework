@@ -4,9 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="图灵rpc">
+    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="图灵rpc，最后一节，添加服务Mock&#10;mock就是解决了开发前端时没有后端支持，开发接口时依赖没有到位的尴尬场景等。">
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/main/java/com/qjj/service/HelloService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/main/java/com/qjj/service/impl/HelloServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/main/java/com/qjj/service/impl/HelloServiceImpl2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_client/src/main/java/com/qjj/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_client/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/src/main/java/com/qjj/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/proxy/ProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/proxy/ProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,29 +59,29 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/qiingjiajun/git project/rpc/rpc_framework/rpc_framework/rpc_tul/rpc_tul_api/src/main/java/com&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.18735632&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.ignored.files&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "/Users/qiingjiajun/git project/rpc/rpc_framework/rpc_framework/rpc_framework_qjj/rpc_qjj_api/src",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.18735632",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.qjj.protocol" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src" />
       <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_api/src/main/java/com" />
       <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java" />
       <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_service/src" />
       <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_service/src/main" />
-      <recent name="$PROJECT_DIR$/rpc_qjj/rpc_qjj_service1/src/main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj" />
@@ -225,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688570046732</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="图灵rpc，最后一节，添加服务Mock&#10;mock就是解决了开发前端时没有后端支持，开发接口时依赖没有到位的尴尬场景等。">
+      <created>1688570994890</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688570994890</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +268,8 @@
     <MESSAGE value="自造论子手写rpc思路" />
     <MESSAGE value="图灵rpc框架思路" />
     <MESSAGE value="图灵rpc" />
-    <option name="LAST_COMMIT_MESSAGE" value="图灵rpc" />
+    <MESSAGE value="图灵rpc，最后一节，添加服务Mock&#10;mock就是解决了开发前端时没有后端支持，开发接口时依赖没有到位的尴尬场景等。" />
+    <option name="LAST_COMMIT_MESSAGE" value="图灵rpc，最后一节，添加服务Mock&#10;mock就是解决了开发前端时没有后端支持，开发接口时依赖没有到位的尴尬场景等。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -270,7 +295,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj/proxy/ProxyFactory.java</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>

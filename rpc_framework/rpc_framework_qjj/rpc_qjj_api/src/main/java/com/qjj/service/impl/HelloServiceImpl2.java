@@ -1,5 +1,6 @@
 package com.qjj.service.impl;
 
+import com.qjj.annotation.NettyRpcService;
 import com.qjj.service.HelloService;
 
 import java.rmi.RemoteException;
@@ -9,7 +10,7 @@ import java.rmi.RemoteException;
  * @create: 2023-07-06 23:37
  * @Description: 服务实现类第二个版本
  */
-
+@NettyRpcService(value = HelloService.class,version = "2.0")
 public class HelloServiceImpl2 implements HelloService {
     public HelloServiceImpl2() {
 

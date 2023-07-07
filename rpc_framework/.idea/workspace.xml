@@ -4,26 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="图灵rpc，最后一节，添加服务Mock&#10;mock就是解决了开发前端时没有后端支持，开发接口时依赖没有到位的尴尬场景等。">
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/main/java/com/qjj/service/HelloService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/main/java/com/qjj/service/impl/HelloServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/main/java/com/qjj/service/impl/HelloServiceImpl2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/test/java/com/qjj/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_client/src/main/java/com/qjj/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_client/src/test/java/com/qjj/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/test/java/com/qjj/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/src/main/java/com/qjj/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="把自己要写的rpc框架项目结构搭好，然后明天开始从server端开始完善">
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/annotation/NettyRpcService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/annotation/RpcAutowired.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/codec/Beat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/codec/RpcDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/codec/RpcEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/codec/RpcRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/codec/RpcResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/utils/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/utils/SerializationUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/utils/ServiceUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/utils/ThreadPoolUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/test/java/com/qjj/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/RpcServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyRpcServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyRpcServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/src/main/java/com/qjj/service/RpcServerBootstrap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/src/main/resources/rpc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/src/main/resources/server-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/main/java/com/qjj/service/impl/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/main/java/com/qjj/service/impl/HelloServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/main/java/com/qjj/service/impl/HelloServiceImpl2.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/main/java/com/qjj/service/impl/HelloServiceImpl2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +76,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "/Users/qiingjiajun/git project/rpc/rpc_framework/rpc_framework/rpc_framework_qjj/rpc_qjj_api/src",
+    "last_opened_file_path": "/Users/qiingjiajun/git project/rpc/rpc_framework/rpc_framework/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/utils",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.18735632",
@@ -77,11 +88,11 @@
       <recent name="com.qjj.protocol" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/utils" />
+      <recent name="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj" />
+      <recent name="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj" />
+      <recent name="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/src/main" />
       <recent name="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src" />
-      <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_api/src/main/java/com" />
-      <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java" />
-      <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_service/src" />
-      <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_service/src/main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/rpc_tul/rpc_tul_framework/src/main/java/com/qjj" />
@@ -91,9 +102,10 @@
       <recent name="com.qjj.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qjj.utils" />
+      <recent name="com.qjj.service" />
       <recent name="com.qjj" />
       <recent name="com.qjj.service.impl" />
-      <recent name="com.qjj.service" />
     </key>
   </component>
   <component name="RunManager" selected="Application.RpcClient">
@@ -249,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688570994890</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="把自己要写的rpc框架项目结构搭好，然后明天开始从server端开始完善">
+      <created>1688658033611</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688658033611</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -269,7 +288,8 @@
     <MESSAGE value="图灵rpc框架思路" />
     <MESSAGE value="图灵rpc" />
     <MESSAGE value="图灵rpc，最后一节，添加服务Mock&#10;mock就是解决了开发前端时没有后端支持，开发接口时依赖没有到位的尴尬场景等。" />
-    <option name="LAST_COMMIT_MESSAGE" value="图灵rpc，最后一节，添加服务Mock&#10;mock就是解决了开发前端时没有后端支持，开发接口时依赖没有到位的尴尬场景等。" />
+    <MESSAGE value="把自己要写的rpc框架项目结构搭好，然后明天开始从server端开始完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="把自己要写的rpc框架项目结构搭好，然后明天开始从server端开始完善" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

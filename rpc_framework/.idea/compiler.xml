@@ -10,6 +10,7 @@
         <module name="zk_client" />
         <module name="rpc_api" />
         <module name="rpc_tul_framework" />
+        <module name="rpc_qjj_common" />
         <module name="rpc_zk" />
         <module name="rpc_easy_framework" />
         <module name="rpc_tul_client" />
@@ -26,7 +27,6 @@
     <bytecodeTargetLevel>
       <module name="commons" target="1.8" />
       <module name="rpc_qjj" target="1.8" />
-      <module name="rpc_qjj_common" target="1.8" />
       <module name="rpc_qjj_service" target="1.8" />
       <module name="rpc_tl_api" target="1.8" />
       <module name="rpc_tl_client" target="1.8" />

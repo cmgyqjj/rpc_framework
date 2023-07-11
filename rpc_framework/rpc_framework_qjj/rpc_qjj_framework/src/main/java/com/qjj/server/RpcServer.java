@@ -20,6 +20,13 @@ import java.util.Map;
 public class RpcServer extends NettyServer implements ApplicationContextAware , InitializingBean, DisposableBean {
 
 
+
+    /**
+    *@Param: ApplicationContext ctx
+    *@return: void
+    *@Author: qjj
+    *@date: 通过注解找到类，通过类取到类名，通过类取到版本号，把类名和版本号和类对象放入到map中，这里是为了完成服务端的本地注册
+    */
     @Override
     public void setApplicationContext(ApplicationContext ctx) throws BeansException {
 //        获取所有带有NettyRpcService助解的对象

@@ -1,11 +1,15 @@
 package com.qjj.server.core;
 
 import com.qjj.codec.RpcRequest;
+import com.qjj.codec.RpcResponse;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import org.springframework.cglib.reflect.FastClass;
+import org.springframework.cglib.reflect.FastMethod;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
-import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * @author:qjj
@@ -21,8 +25,49 @@ public class NettyRpcServerHandler extends SimpleChannelInboundHandler<RpcReques
         this.handlerMap = handlerMap;
     }
 
+    /**
+    *@Param:
+     * ChannelHandlerContext ctx
+     * RpcRequest rpcRequest
+    *@return: void
+    *@Author: qjj
+    *@date: 处理请求，并且返回结果的逻辑
+    */
     @Override
-    protected void channelRead0(ChannelHandlerContext channelHandlerContext, RpcRequest rpcRequest) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, RpcRequest rpcRequest) throws Exception {
+        RpcResponse rpcResponse = new RpcResponse();
+        rpcResponse.setRequestId(rpcRequest.getRequestId());
+        try{
+            Object result=handle(rpcRequest);
+            rpcResponse.setResult(result);
+        }catch (Throwable throwable){
+            rpcResponse.setError(throwable.toString());
+        }
+        ctx.writeAndFlush(rpcResponse).addListener(ChannelFutureListener.CLOSE);
 
+    }
+
+    /**
+    *@Param: RpcRequest rpcRequest
+    *@return: Object
+    *@Author: qjj
+    *@date:具体的执行流程，先读取到请求需要的className，然后通过className从本地注册中找到service，然后再通过反射调用service的方法
+     * 并且带上参数，最后返回结果
+    */
+    private Object handle(RpcRequest rpcRequest) throws InvocationTargetException {
+        String className = rpcRequest.getClassName();
+        Object serviceBean = handlerMap.get(className);
+        Class<?> serviceClass = serviceBean.getClass();
+        String methodName = rpcRequest.getMethodName();
+        Class<?>[] parameterTypes = rpcRequest.getParameterTypes();
+        Object[] parameters = rpcRequest.getParameters();
+//        通过FastClass来调用方法
+//        FastClass不使用反射类（Constructor或Method）来调用委托类方法，而是动态生成一个新的类（继承FastClass），
+//        向类中写入委托类实例直接调用方法的语句，用模板方式解决Java语法不支持问题，同时改善Java反射性能。
+//        动态类为委托类方法调用语句建立索引，使用者根据方法签名（方法名+参数类型）得到索引值，再通过索引值进入相应的方法调用语句，得到调用结果。
+        FastClass serviceFastClass = FastClass.create(serviceClass);
+        FastMethod serviceFastMethod = serviceFastClass.getMethod(methodName, parameterTypes);
+        Object result = serviceFastMethod.invoke(serviceBean, parameters);
+        return result;
     }
 }

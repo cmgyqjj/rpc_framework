@@ -29,6 +29,13 @@ public class NettyRpcServerInitializer extends ChannelInitializer<SocketChannel>
         this.handlerMap = handlerMap;
     }
 
+    /**
+    *@Param: SocketChannel ch
+    *@return: void
+    *@Author: qjj
+    *@date:
+     * 初始化管道，添加编码器，解码器，处理器
+    */
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
         ChannelPipeline p = ch.pipeline();

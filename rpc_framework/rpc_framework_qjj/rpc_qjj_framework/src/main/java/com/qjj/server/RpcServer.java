@@ -25,7 +25,9 @@ public class RpcServer extends NettyServer implements ApplicationContextAware , 
     *@Param: ApplicationContext ctx
     *@return: void
     *@Author: qjj
-    *@date: 通过注解找到类，通过类取到类名，通过类取到版本号，把类名和版本号和类对象放入到map中，这里是为了完成服务端的本地注册
+    *@date:
+     * ApplicationContextAware接口的方法，当spring容器初始化的时候，会调用这个方法，这里是为了完成服务端注册
+     * 通过注解找到类，通过类取到类名，通过类取到版本号，把类名和版本号和类对象放入到map中，这里是为了完成服务端注册
     */
     @Override
     public void setApplicationContext(ApplicationContext ctx) throws BeansException {
@@ -45,11 +47,25 @@ public class RpcServer extends NettyServer implements ApplicationContextAware , 
         }
     }
 
+    /**
+    *@Param: void
+    *@return: void
+    *@Author: qjj
+    *@date:
+     * InitializingBean接口的方法，当spring容器初始化完成后，会调用这个方法，这里是为了完成服务端注册
+    */
     @Override
     public void afterPropertiesSet() throws Exception {
         super.start();
     }
 
+    /**
+    *@Param: void
+    *@return: void
+    *@Author: qjj
+    *@date:
+     * DisposableBean接口的方法，当spring容器销毁的时候，会调用这个方法，这里是为了完成服务端的销毁
+    */
     @Override
     public void destroy() throws Exception {
         super.stop();

@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="server端写了一些基础的结构，但是还缺少netty实现rpc的handler部分">
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/registry/ServiceRegistry.java" afterDir="false" />
+    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="server端继续补充了服务调用的逻辑&#10;目前还差服务在注册中性注册的逻辑&#10;ServiceRegistry类还需要继续完善">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/utils/SerializationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/utils/SerializationUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/RpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/RpcServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyRpcServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyRpcServerHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyRpcServerInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyRpcServerInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688724478900</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="server端继续补充了服务调用的逻辑&#10;目前还差服务在注册中性注册的逻辑&#10;ServiceRegistry类还需要继续完善">
+      <created>1689068608643</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689068608643</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,7 +270,8 @@
     <MESSAGE value="图灵rpc，最后一节，添加服务Mock&#10;mock就是解决了开发前端时没有后端支持，开发接口时依赖没有到位的尴尬场景等。" />
     <MESSAGE value="把自己要写的rpc框架项目结构搭好，然后明天开始从server端开始完善" />
     <MESSAGE value="server端写了一些基础的结构，但是还缺少netty实现rpc的handler部分" />
-    <option name="LAST_COMMIT_MESSAGE" value="server端写了一些基础的结构，但是还缺少netty实现rpc的handler部分" />
+    <MESSAGE value="server端继续补充了服务调用的逻辑&#10;目前还差服务在注册中性注册的逻辑&#10;ServiceRegistry类还需要继续完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="server端继续补充了服务调用的逻辑&#10;目前还差服务在注册中性注册的逻辑&#10;ServiceRegistry类还需要继续完善" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

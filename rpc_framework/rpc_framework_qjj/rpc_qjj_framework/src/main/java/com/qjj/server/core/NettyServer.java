@@ -31,7 +31,13 @@ public class NettyServer extends Server{
 //    服务注册类，用于将服务注册到注册中心
     private ServiceRegistry serviceRegistry;
 
-
+    /**
+    *@Param: void
+    *@return: void
+    *@Author: qjj
+    *@date:
+     * 启动RPC服务的核心逻辑
+    */
     @Override
     public void start() throws Exception {
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -57,6 +63,7 @@ public class NettyServer extends Server{
 //            这里的sync()方法是等待绑定操作完成，sync()方法会阻塞到bind()操作完成为止
             ChannelFuture future = bootstrap.bind(host, port).sync();
             if (serviceRegistry != null) {
+//                把服务注册到注册中心
                 serviceRegistry.registerService(host, port, serviceMap);
             }
             log.info("Server started on port {}", port);
@@ -76,13 +83,28 @@ public class NettyServer extends Server{
 
     }
 
+    /**
+    *@Param: void
+    *@return: void
+    *@Author: qjj
+    *@date:
+     * 关闭RPC服务的核心逻辑
+    */
     @Override
     public void stop() throws Exception {
 //        TODO 先不写这个逻辑吧，后面再补
         System.out.println("RpcServer stop");
     }
 
-//    本地注册服务
+    /**
+    *@Param: String interfaceName
+     *  String version
+     *  Object serviceBean
+    *@return: void
+    *@Author: qjj
+    *@date:
+     * 在本地添加服务，为了后面注册到注册中心
+    */
     protected void addService(String interfaceName, String version, Object serviceBean) {
         log.info("Adding service, interface: {}, version: {}, bean：{}", interfaceName, version, serviceBean);
 //        先直接简单的装进去

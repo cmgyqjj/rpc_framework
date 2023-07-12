@@ -108,7 +108,7 @@ public class NettyServer extends Server{
     protected void addService(String interfaceName, String version, Object serviceBean) {
         log.info("Adding service, interface: {}, version: {}, bean：{}", interfaceName, version, serviceBean);
 //        先直接简单的装进去
-        serviceMap.put(interfaceName+version, serviceBean);
+        serviceMap.put(interfaceName+"#"+version, serviceBean);
 //       使用工具类加密之后再存进去
 //        String serviceKey = ServiceUtil.makeServiceKey(interfaceName, version);
 //        serviceMap.put(serviceKey, serviceBean);

@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="server端继续补充了服务调用的逻辑&#10;目前还差服务在注册中性注册的逻辑&#10;ServiceRegistry类还需要继续完善">
+    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="server端做了一些微小的改进，添加了大量的逐行注释来方便理解和学习，并且为了规范，给每个方法上都添加了方法级的注释">
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/protocol/RpcProtocol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/protocol/RpcServiceInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/RpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/RpcServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyRpcServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyRpcServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyRpcServerInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyRpcServerInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/registry/ServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/registry/ServiceRegistry.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,26 +45,26 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/qiingjiajun/git project/rpc/rpc_framework/rpc_framework/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/utils&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.18735632&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.ignored.files&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "/Users/qiingjiajun/git project/rpc/rpc_framework/rpc_framework/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.18735632",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.qjj.protocol" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/utils" />
       <recent name="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj" />
+      <recent name="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/utils" />
       <recent name="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj" />
       <recent name="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/src/main" />
       <recent name="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src" />
@@ -248,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689068608643</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="server端做了一些微小的改进，添加了大量的逐行注释来方便理解和学习，并且为了规范，给每个方法上都添加了方法级的注释">
+      <created>1689072510077</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689072510077</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -271,7 +278,8 @@
     <MESSAGE value="把自己要写的rpc框架项目结构搭好，然后明天开始从server端开始完善" />
     <MESSAGE value="server端写了一些基础的结构，但是还缺少netty实现rpc的handler部分" />
     <MESSAGE value="server端继续补充了服务调用的逻辑&#10;目前还差服务在注册中性注册的逻辑&#10;ServiceRegistry类还需要继续完善" />
-    <option name="LAST_COMMIT_MESSAGE" value="server端继续补充了服务调用的逻辑&#10;目前还差服务在注册中性注册的逻辑&#10;ServiceRegistry类还需要继续完善" />
+    <MESSAGE value="server端做了一些微小的改进，添加了大量的逐行注释来方便理解和学习，并且为了规范，给每个方法上都添加了方法级的注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="server端做了一些微小的改进，添加了大量的逐行注释来方便理解和学习，并且为了规范，给每个方法上都添加了方法级的注释" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

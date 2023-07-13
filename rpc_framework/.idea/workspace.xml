@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="server端做了一些微小的改进，添加了大量的逐行注释来方便理解和学习，并且为了规范，给每个方法上都添加了方法级的注释">
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/protocol/RpcProtocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj/protocol/RpcServiceInfo.java" afterDir="false" />
+    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="server端做了继续改了一点，先改这么多吧，把registerService方法写了一下，但是还需要注册到zk里面，目前只是从serviceMap里面取到了类名和对应的版本">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/core/NettyServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/registry/ServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java/com/qjj/server/registry/ServiceRegistry.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,19 +42,19 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "/Users/qiingjiajun/git project/rpc/rpc_framework/rpc_framework/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.18735632",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/qiingjiajun/git project/rpc/rpc_framework/rpc_framework/rpc_framework_qjj/rpc_qjj_common/src/main/java/com/qjj&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.18735632&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.ignored.files&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.qjj.protocol" />
@@ -255,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689072510077</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="server端做了继续改了一点，先改这么多吧，把registerService方法写了一下，但是还需要注册到zk里面，目前只是从serviceMap里面取到了类名和对应的版本">
+      <created>1689166302401</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689166302401</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -279,7 +283,8 @@
     <MESSAGE value="server端写了一些基础的结构，但是还缺少netty实现rpc的handler部分" />
     <MESSAGE value="server端继续补充了服务调用的逻辑&#10;目前还差服务在注册中性注册的逻辑&#10;ServiceRegistry类还需要继续完善" />
     <MESSAGE value="server端做了一些微小的改进，添加了大量的逐行注释来方便理解和学习，并且为了规范，给每个方法上都添加了方法级的注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="server端做了一些微小的改进，添加了大量的逐行注释来方便理解和学习，并且为了规范，给每个方法上都添加了方法级的注释" />
+    <MESSAGE value="server端做了继续改了一点，先改这么多吧，把registerService方法写了一下，但是还需要注册到zk里面，目前只是从serviceMap里面取到了类名和对应的版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="server端做了继续改了一点，先改这么多吧，把registerService方法写了一下，但是还需要注册到zk里面，目前只是从serviceMap里面取到了类名和对应的版本" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

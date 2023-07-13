@@ -19,7 +19,9 @@ import java.util.Map;
 
 public class RpcServer extends NettyServer implements ApplicationContextAware , InitializingBean, DisposableBean {
 
-
+    public RpcServer(String serverAddress, String registryAddress) {
+        super(serverAddress, registryAddress);
+    }
 
     /**
     *@Param: ApplicationContext ctx

@@ -19,17 +19,16 @@ import java.util.concurrent.CountDownLatch;
 @Slf4j
 public class ServiceRegistry {
 
+    private ZooKeeper zk;
+
+    public ServiceRegistry(String registryAddress) {
+        zk = connectServer(registryAddress,5000);
+    }
+
     private CountDownLatch latch = new CountDownLatch(1);
 
     public void registerService(String host, int port, Map<String, Object> serviceMap) {
 //        List<RpcServiceInfo> serviceInfoList = new ArrayList<>();
-        ZooKeeper zk=null;
-        if(serviceMap!=null){
-            zk = connectServer(host,port);
-        }else{
-            log.info("No service need to register");
-            return;
-        }
         for (String key : serviceMap.keySet()) {
 //            因为在刚刚的NettyServer中使用的是#作为分隔符，所以这里也要使用#作为分隔符
             String[] serviceInfo = key.split("#");
@@ -52,17 +51,17 @@ public class ServiceRegistry {
     }
 
 
-    private ZooKeeper connectServer(String host, int port) {
+    private ZooKeeper connectServer(String registryAddress, int sessionTimeout) {
         ZooKeeper zk = null;
         try {
-            zk = new ZooKeeper(host+":"+port, 10000, event -> {
+            zk = new ZooKeeper(registryAddress, sessionTimeout, event -> {
                 if (event.getState() == Watcher.Event.KeeperState.SyncConnected) {
                     latch.countDown();
                 }
             });
             latch.await();
         } catch (IOException | InterruptedException e) {
-            log.info("Can't connect to zookeeper"+host+":"+port,e);
+            log.info("Can't connect to zookeeper"+registryAddress,e);
         }
         return zk;
     }

@@ -22,7 +22,14 @@ import java.util.Map;
 @Slf4j
 public class NettyServer extends Server{
 
-//    服务地址，格式为：ip:port
+    public NettyServer(String serverAddress, String registryAddress) {
+        this.serverAddress = serverAddress;
+        this.serviceRegistry = new ServiceRegistry(registryAddress);
+    }
+
+
+
+    //    服务地址，格式为：ip:port
     private String serverAddress;
 
 //    存放接口名与服务对象之间的映射关系

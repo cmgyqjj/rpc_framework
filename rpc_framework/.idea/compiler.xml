@@ -15,6 +15,7 @@
         <module name="rpc_qjj_common" />
         <module name="rpc_zk" />
         <module name="rpc_easy_framework" />
+        <module name="rpc_mini" />
         <module name="rpc_tul_client" />
         <module name="rpc_qjj_api" />
         <module name="rpc_tul" />
@@ -42,6 +43,7 @@
       <module name="rpc_api" options="-parameters" />
       <module name="rpc_easy_framework" options="-parameters" />
       <module name="rpc_framework_qjj" options="" />
+      <module name="rpc_mini" options="-parameters" />
       <module name="rpc_qjj" options="" />
       <module name="rpc_qjj_api" options="-parameters" />
       <module name="rpc_qjj_client" options="-parameters" />

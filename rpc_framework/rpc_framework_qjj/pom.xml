@@ -18,6 +18,8 @@
         <module>rpc_qjj_framework</module>
         <module>rpc_qjj_api</module>
         <module>rpc_qjj_common</module>
+        <module>rpc_qjj_framework/rpc_qjj_server_framework</module>
+        <module>rpc_qjj_framework/rpc_qjj_client_framework</module>
     </modules>
 
     <properties>

@@ -20,9 +20,14 @@
     <dependencies>
         <dependency>
             <groupId>com.qjj</groupId>
-            <artifactId>rpc_qjj_framework</artifactId>
+            <artifactId>rpc_qjj_server_framework</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.qjj</groupId>-->
+<!--            <artifactId>rpc_qjj_framework</artifactId>-->
+<!--            <version>1.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

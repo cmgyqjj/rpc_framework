@@ -1,7 +1,6 @@
 package com.qjj.server.core;
 
 import com.qjj.server.registry.ServiceRegistry;
-import com.qjj.utils.ServiceUtil;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelOption;
@@ -9,7 +8,6 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import lombok.extern.slf4j.Slf4j;
-
 
 import java.util.HashMap;
 import java.util.Map;

@@ -16,7 +16,7 @@
     <!--        <constructor-arg name="registryAddress" value="${registry.address}"/>-->
     <!--    </bean>-->
 
-    <bean id="rpcServer" class="com.qjj.server.RpcServer">
+    <bean id="rpcServer" class= "com.qjj.server.RpcServer">
         <constructor-arg name="serverAddress" value="${server.address}"/>
         <constructor-arg name="registryAddress" value="${registry.address}"/>
     </bean>

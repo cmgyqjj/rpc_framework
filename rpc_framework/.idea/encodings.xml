@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/rpc_qjj_client_framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/rpc_qjj_server_framework/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_framework/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework_qjj/rpc_qjj_server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework_qjj/src/main/java" charset="UTF-8" />

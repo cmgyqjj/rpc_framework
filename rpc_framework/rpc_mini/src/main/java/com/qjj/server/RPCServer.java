@@ -19,12 +19,12 @@ import java.net.Socket;
  *         这边直接把对象给new出来了，但是RPC实现的话，应该是通过反射的方式
  *         TODO 反射的方式
  *         TODO 可以使用NIO的方式，比如使用Netty代替
+ *         TODO 使用线程来避免阻塞
  */
 
 
 public class RPCServer {
     public static void main(String[] args) {
-
         UserServiceImpl userService = new UserServiceImpl();
         try {
             ServerSocket serverSocket = new ServerSocket(8899);

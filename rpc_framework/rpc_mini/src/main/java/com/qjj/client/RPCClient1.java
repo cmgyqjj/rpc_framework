@@ -21,6 +21,7 @@ public class RPCClient1 {
             ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
             int id = new Random().nextInt(10);
             objectOutputStream.writeInt(id);
+            objectOutputStream.flush();
             Object o = objectInputStream.readObject();
             String user = (String) o;
             System.out.println("服务端返回的User:"+user);

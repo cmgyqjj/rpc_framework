@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="client开始写了&#10;准备先再动手写个mini版的rpc&#10;再来补这个client&#10;有点想不清楚">
-      <change afterPath="$PROJECT_DIR$/rpc_mini_req_resp/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_mini_req_resp/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_mini_req_resp/src/main/java/com/qjj/client/RpcClientNetty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_mini_req_resp/src/main/java/com/qjj/common/RpcRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_mini_req_resp/src/main/java/com/qjj/common/RpcResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_mini_req_resp/src/main/java/com/qjj/server/RpcServerNetty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_mini_req_resp/src/main/java/com/qjj/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc_mini_req_resp/src/main/java/com/qjj/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5c3ac545-f392-420e-8bab-2d6f97e96a5d" name="Changes" comment="rpc_mini_req_resp模块写了一大部分，还差通用的请求解码器，今天可能先改这么多，后续明天再弄">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_mini/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_mini/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_mini/src/main/java/com/qjj/server/RPCServer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_mini/src/main/java/com/qjj/server/RPCServer2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_mini_netty/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_mini_netty/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_mini_netty/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_mini_netty/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc_mini_netty/src/main/java/com/qjj/server/RPCServerNetty.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc_mini_netty/src/main/java/com/qjj/server/RPCServerNetty.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689323194622</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="rpc_mini_req_resp模块写了一大部分，还差通用的请求解码器，今天可能先改这么多，后续明天再弄">
+      <created>1689425393959</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1689425393959</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -326,7 +315,8 @@
     <MESSAGE value="server端做了继续改了一点，补充了zk服务注册的逻辑" />
     <MESSAGE value="server端修改了一些问题&#10;1.配置项没有正确配置&#10;2.缺少了带有配置项参数的初始化构造方法" />
     <MESSAGE value="client开始写了&#10;准备先再动手写个mini版的rpc&#10;再来补这个client&#10;有点想不清楚" />
-    <option name="LAST_COMMIT_MESSAGE" value="client开始写了&#10;准备先再动手写个mini版的rpc&#10;再来补这个client&#10;有点想不清楚" />
+    <MESSAGE value="rpc_mini_req_resp模块写了一大部分，还差通用的请求解码器，今天可能先改这么多，后续明天再弄" />
+    <option name="LAST_COMMIT_MESSAGE" value="rpc_mini_req_resp模块写了一大部分，还差通用的请求解码器，今天可能先改这么多，后续明天再弄" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -6,7 +6,6 @@
   <artifactId>rpc_framework</artifactId>
   <version>1.0-SNAPSHOT</version>
   <modules>
-
     <module>rpc_zk</module>
     <module>rpc_zk/zk_client</module>
     <module>rpc_zk/zk_server</module>
@@ -20,6 +19,7 @@
       <module>rpc_framework_qjj</module>
       <module>rpc_mini</module>
     <module>rpc_mini_netty</module>
+    <module>rpc_mini_req_resp</module>
   </modules>
 
   <name>rpc_framework</name>

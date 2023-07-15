@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>rpc_mini_netty</artifactId>
+    <artifactId>rpc_mini_req_resp</artifactId>
     <packaging>pom</packaging>
 
-    <name>rpc_mini_netty</name>
+    <name>rpc_mini_req_resp</name>
     <url>http://maven.apache.org</url>
 
     <properties>

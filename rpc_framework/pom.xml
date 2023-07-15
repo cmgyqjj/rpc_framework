@@ -19,6 +19,7 @@
     <module>rpc_tul/rpc_tul_service</module>
       <module>rpc_framework_qjj</module>
       <module>rpc_mini</module>
+    <module>rpc_mini_netty</module>
   </modules>
 
   <name>rpc_framework</name>

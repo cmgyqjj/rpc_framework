@@ -1,0 +1,5 @@
+# 一个极短代码实现的RPC调用过程，基于Netty实现
+
+通过运行RPCServerNetty和RPCClientNetty来模拟RPC调用过程
+
+本例只使用了netty简短的实现了RPC调用,尽量使用最通俗的语法来实现各功能

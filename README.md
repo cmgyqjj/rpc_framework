@@ -4,9 +4,9 @@
 
 1. 尚硅谷：rpc_zk
 2. 图灵：rpc_tul
-3. mini版RPC: rpc_mini，一个单纯使用socket实现的rpc调用过程
-4. mini_netty版RPC：rpc_mini_netty，一个单纯使用netty实现的rpc调用过程
-5. mini_req_resp版RPC：封装了Request和Response类，并且添加了动态代理和反射来支持不同方法和不同参数的调用
+3. mini版RPC: rpc_mini,一个单纯使用socket实现的rpc调用过程
+4. mini_netty版RPC：rpc_mini_netty,一个单纯使用netty实现的rpc调用过程
+5. mini_req_resp版RPC：rpc_min_req_resp,封装了Request和Response类，并且添加了动态代理和反射来支持不同方法和不同参数的调用
 
 # 除此之外
 还有正在路上的多个rpc轮子

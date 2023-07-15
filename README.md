@@ -1,20 +1,32 @@
-# rpc造轮子实现
+## RPC Implementation Frameworks
+**[中文版](READMEChina.md)｜[English](README.md)**
 
-包含了几个不同的rpc轮子项目实现，包括：
+This project contains several implementations of Remote 
+Procedure Call (RPC) frameworks, including:
 
-1. 尚硅谷：rpc_zk
-2. 图灵：rpc_tul
-3. mini版RPC: rpc_mini,一个单纯使用socket实现的rpc调用过程
-4. mini_netty版RPC：rpc_mini_netty,一个单纯使用netty实现的rpc调用过程
-5. mini_req_resp版RPC：rpc_min_req_resp,封装了Request和Response类，并且添加了动态代理和反射来支持不同方法和不同参数的调用
+1. rpc_zk by Shanguigu
+2. rpc_tul by Tuling
+3. rpc_mini, a simple RPC call process implemented using only sockets
+4. rpc_mini_netty, a simple RPC call process implemented using only Netty
+5. rpc_min_req_resp, which encapsulates Request and Response classes and adds dynamic proxy and reflection to support calling different methods with different parameters.
 
-# 除此之外
-还有正在路上的多个rpc轮子
+# Other Work
+We are currently developing several other RPC frameworks.
+To facilitate learning, we plan to split each improvement 
+into separate parts, similar to a melting experiment. 
+We will also supplement the documentation to better explain 
+the contributions made by each improvement and to facilitate 
+further improvement.
 
-为了方便学习，后续会将每个改进都拆分开来，类似消融实验？ 
+## TODO LIST
 
-并且补充文档来方便理解每个改进做的贡献，并且方便后续更好的改进
+- [ ] Add supporting documentation, including comments for each method
+- [ ] Continue to add more complex RPC frameworks
+- [ ] Refactor existing RPC frameworks for better understanding
+- [ ] Support multiple encoders and decoders
+- [ ] Support multiple registry centers
+- [ ] Any other extension or improvement
 
-## 最新更新时间 2023/7/15
+## Latest Update: July 16, 2023
 
-如果有任何问题欢迎提issue
+If you have any questions, please feel free to submit an issue.

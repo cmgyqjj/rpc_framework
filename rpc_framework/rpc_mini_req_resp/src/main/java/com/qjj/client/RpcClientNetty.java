@@ -1,7 +1,10 @@
 package com.qjj.client;
 
+import com.qjj.common.RpcDecoder;
+import com.qjj.common.RpcEncoder;
 import com.qjj.common.RpcRequest;
 import com.qjj.common.RpcResponse;
+import com.qjj.hander.RpcClientHander;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandlerContext;
@@ -31,21 +34,9 @@ public class RpcClientNetty {
                 .handler(new ChannelInitializer<NioSocketChannel>() {
                     @Override
                     protected void initChannel(NioSocketChannel ch) throws Exception {
-//                            TODO 需要改造成通用的，而不是StringDecoder，StringEncoder
-                        ch.pipeline().addLast(new StringDecoder());
-                        ch.pipeline().addLast(new StringEncoder());
-                        ch.pipeline().addLast(new ChannelInboundHandlerAdapter(){
-                            @Override
-                            public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-                                RpcResponse rpcResponse = (RpcResponse) msg;
-                                System.out.println("打印RPC远程调用结果:"+rpcResponse.getCode());
-                                if(rpcResponse.getCode() == 200) {
-                                    System.out.println("打印RPC远程调用结果:" + rpcResponse.getResult());
-                                }else{
-                                    System.out.println("打印RPC远程调用结果:" + rpcResponse.getError());
-                                }
-                            }
-                        });
+                        ch.pipeline().addLast(new RpcEncoder(RpcRequest.class));
+                        ch.pipeline().addLast(new RpcDecoder(RpcResponse.class));
+                        ch.pipeline().addLast(new RpcClientHander());
                     }
                 }).connect(new InetSocketAddress("localhost", 8899));
         Integer id = new Random().nextInt(10);

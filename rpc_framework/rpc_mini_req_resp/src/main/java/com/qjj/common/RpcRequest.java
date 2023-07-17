@@ -2,6 +2,8 @@ package com.qjj.common;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 /**
  * @author:qjj
  * @create: 2023-07-15 19:53
@@ -10,7 +12,7 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RpcRequest {
+public class RpcRequest implements Serializable {
 
     private String requestId;
 

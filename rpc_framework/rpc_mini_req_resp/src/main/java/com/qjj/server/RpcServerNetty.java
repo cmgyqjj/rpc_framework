@@ -21,7 +21,6 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 
 public class RpcServerNetty {
     public static void main(String[] args) {
-        UserServiceImpl userService = new UserServiceImpl();
         try{
             new ServerBootstrap()
                     .group(new NioEventLoopGroup())

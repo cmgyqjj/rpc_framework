@@ -13,7 +13,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 public class RpcClientHander extends SimpleChannelInboundHandler<RpcResponse> {
 
     @Override
-    protected void channelRead0(ChannelHandlerContext channelHandlerContext, RpcResponse resp) throws Exception {
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, RpcResponse resp) {
         System.out.println("打印RPC远程调用结果:"+resp.getCode());
         if(resp.getCode() == 200) {
             System.out.println("打印RPC远程调用结果:" + resp.getResult());

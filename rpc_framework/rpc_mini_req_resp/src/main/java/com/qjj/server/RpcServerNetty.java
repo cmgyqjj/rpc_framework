@@ -30,7 +30,7 @@ public class RpcServerNetty {
                         @Override
                         protected void initChannel(NioSocketChannel ch) throws Exception {
                             ch.pipeline().addLast(new RpcDecoder(RpcRequest.class));
-                            ch.pipeline().addLast(new RpcDecoder(RpcResponse.class));
+                            ch.pipeline().addLast(new RpcEncoder(RpcResponse.class));
                             ch.pipeline().addLast(new RpcServerHander());
                         }
                     }).bind(8899);

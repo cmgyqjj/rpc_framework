@@ -20,6 +20,11 @@
       <module>rpc_mini</module>
     <module>rpc_mini_netty</module>
     <module>rpc_mini_req_resp</module>
+      <module>rpc_mini_zk</module>
+      <module>rpc_mini_zk/rpc_mini_zk_api</module>
+    <module>rpc_mini_zk/rpc_mini_zk_common</module>
+    <module>rpc_mini_zk/rpc_mini_zk_server</module>
+    <module>rpc_mini_zk/rpc_mini_zk_client</module>
   </modules>
 
   <name>rpc_framework</name>

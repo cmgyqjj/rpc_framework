@@ -12,8 +12,10 @@ Procedure Call (RPC) frameworks, including:
 
 # Other Work
 We are currently developing several other RPC frameworks.
+
 To facilitate learning, we plan to split each improvement 
 into separate parts, similar to a melting experiment. 
+
 We will also supplement the documentation to better explain 
 the contributions made by each improvement and to facilitate 
 further improvement.

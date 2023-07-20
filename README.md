@@ -9,6 +9,8 @@ Procedure Call (RPC) frameworks, including:
 3. rpc_mini, a simple RPC call process implemented using only sockets
 4. rpc_mini_netty, a simple RPC call process implemented using only Netty
 5. rpc_min_req_resp, which encapsulates Request and Response classes and adds dynamic proxy and reflection to support calling different methods with different parameters.
+6. rpc_mini_zk, which adds ZooKeeper to implement service registration and discovery on the basis of rpc_mini_req_resp (TODO)
+
 
 # Other Work
 We are currently developing several other RPC frameworks.
@@ -29,7 +31,7 @@ further improvement.
 - [ ] Support multiple registry centers
 - [ ] Any other extension or improvement
 
-## Latest Update: July 18, 2023
+## Latest Update: July 20, 2023
 
 If you have any questions, please feel free to raise an issue. 
 If you find this helpful for your learning, would you kindly consider giving it a star? 

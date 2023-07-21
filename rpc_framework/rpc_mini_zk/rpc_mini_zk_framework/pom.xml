@@ -8,10 +8,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>rpc_mini_zk_server</artifactId>
+    <artifactId>rpc_mini_zk_framework</artifactId>
     <packaging>jar</packaging>
 
-    <name>rpc_mini_zk_server</name>
+    <name>rpc_mini_zk_framework</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -29,18 +29,6 @@
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.qjj</groupId>
-            <artifactId>rpc_mini_zk_api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.qjj</groupId>
-            <artifactId>rpc_mini_zk_framework</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

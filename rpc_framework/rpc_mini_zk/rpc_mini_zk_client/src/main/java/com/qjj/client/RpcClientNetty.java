@@ -24,6 +24,7 @@ import java.util.UUID;
 public class RpcClientNetty {
 
     public static void main(String[] args) throws InterruptedException {
+
         ChannelFuture future = new Bootstrap()
                 .group(new NioEventLoopGroup())
                 .channel(NioSocketChannel.class)

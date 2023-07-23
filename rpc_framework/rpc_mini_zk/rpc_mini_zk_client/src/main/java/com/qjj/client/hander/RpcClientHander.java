@@ -1,4 +1,4 @@
-package com.qjj.hander;
+package com.qjj.client.hander;
 
 import com.qjj.common.RpcResponse;
 import io.netty.channel.ChannelHandlerContext;

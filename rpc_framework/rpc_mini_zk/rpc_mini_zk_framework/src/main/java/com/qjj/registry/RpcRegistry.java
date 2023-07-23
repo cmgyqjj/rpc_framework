@@ -30,7 +30,7 @@ public interface RpcRegistry {
      *@Author: qjj
      * 服务发现
      */
-    RpcRegistryRequest discovery(String serviceName, int invokerHashCode) throws Exception;
+    RpcRegistryRequest discovery(RpcRegistryRequest request) throws Exception;
     /**
      *@Param:
      *@return:

@@ -1,6 +1,7 @@
 package com.qjj.registry;
 
 import com.qjj.connection.ZkConnection;
+import io.netty.util.internal.ThreadLocalRandom;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
@@ -8,7 +9,6 @@ import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,8 +19,6 @@ import java.util.List;
  */
 @Slf4j
 public class ZkRpcRegistry implements RpcRegistry{
-
-    private volatile List<String> dataList = new ArrayList<String>();
 
 
     private ZooKeeper zooKeeper;
@@ -52,9 +50,8 @@ public class ZkRpcRegistry implements RpcRegistry{
     }
 
     @Override
-    public RpcRegistryRequest discovery(String serviceName, int invokerHashCode) throws Exception {
+    public RpcRegistryRequest discovery(RpcRegistryRequest request) throws Exception {
 //        TODO 服务发现
-
         return null;
     }
 

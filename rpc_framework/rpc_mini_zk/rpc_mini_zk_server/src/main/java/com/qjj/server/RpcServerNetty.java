@@ -7,10 +7,12 @@ import com.qjj.common.RpcResponse;
 
 import com.qjj.hander.RpcServerHander;
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import org.springframework.beans.factory.annotation.Value;
 
 /**
  * @author:qjj
@@ -20,10 +22,16 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 
 
 public class RpcServerNetty {
+
+//    启动的默认端口
+    private static Integer port=8898;
+
     public static void main(String[] args) {
+        NioEventLoopGroup bossGroup = new NioEventLoopGroup();
+        NioEventLoopGroup workGroup = new NioEventLoopGroup();
         try{
-            new ServerBootstrap()
-                    .group(new NioEventLoopGroup())
+            ServerBootstrap serverBootstrap = new ServerBootstrap()
+                    .group(bossGroup, workGroup)
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new ChannelInitializer<NioSocketChannel>() {
                         @Override
@@ -32,13 +40,21 @@ public class RpcServerNetty {
                             ch.pipeline().addLast(new RpcEncoder(RpcResponse.class));
                             ch.pipeline().addLast(new RpcServerHander());
                         }
-                    }).bind(8899);
+                    });
+            // 同步阻塞
+            ChannelFuture channelFuture = serverBootstrap.bind(port).sync();
+            // 死循环监听
+            channelFuture.channel().closeFuture().sync();
+            System.out.println("Netty服务端启动了...");
         }catch (Exception e) {
             if (e instanceof InterruptedException) {
                 System.out.println("Rpc server remoting server stop");
             } else {
                 System.out.println("Rpc server remoting server error");
             }
+        }finally {
+            bossGroup.shutdownGracefully();
+            workGroup.shutdownGracefully();
         }
     }
 }

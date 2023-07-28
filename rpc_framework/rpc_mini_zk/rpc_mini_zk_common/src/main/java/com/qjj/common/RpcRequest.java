@@ -17,7 +17,7 @@ import java.io.Serializable;
 public class RpcRequest implements Serializable {
 
     private String requestId;
-
+    // 客户端只知道接口名，在服务端中用接口名指向实现类
     private String className;
 
     private String methodName;

@@ -15,7 +15,7 @@ import java.util.List;
  * @author:qjj
  * @create: 2023-07-21 21:57
  * @Description: Rpc注册中心
- *  TODO 使用统一的逐渐
+ *  TODO 使用统一的注解
  */
 @Slf4j
 public class ZkRpcRegistry implements RpcRegistry{

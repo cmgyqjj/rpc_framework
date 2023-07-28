@@ -27,8 +27,9 @@ public class RpcServerHander extends SimpleChannelInboundHandler<RpcRequest> {
     //    在本地维护一个接口映射
     private Map<String, Object> interfaceMap;
 
-    //    服务注册
-    private RpcFactory rpcFactory;
+    public RpcServerHander(Map<String, Object> interfaceMap) {
+        this.interfaceMap=interfaceMap;
+    }
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, RpcRequest req) throws Exception {
@@ -57,28 +58,7 @@ public class RpcServerHander extends SimpleChannelInboundHandler<RpcRequest> {
         }
     }
 
-    public void provideServiceInterface(Object service) {
-        Class<?>[] interfaces = service.getClass().getInterfaces();
 
-        for (Class clazz : interfaces) {
-            // 本机的映射表
-            interfaceMap.put(clazz.getName(), service);
-            try {
-//                使用注册中心工厂初始化对应的注册中心
-                RpcRegistry zookeeper = rpcFactory.getInstance("localhost:2181", "zookeeper");
-//                在注册中心注册服务
-                RpcRegistryRequest rpcRegistryRequest = new RpcRegistryRequest();
-                rpcRegistryRequest.setServiceName(clazz.getName());
-                rpcRegistryRequest.setServiceVersion("0");
-                zookeeper.register(rpcRegistryRequest);
-                log.info("注册成功----");
-            } catch (Exception e) {
-                log.error("注册失败----");
-                throw new RuntimeException(e);
-            }
-        }
-
-    }
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {

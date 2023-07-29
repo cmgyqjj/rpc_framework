@@ -13,8 +13,8 @@ import com.qjj.service.impl.UserServiceImpl;
 public class NettyStart {
     public static void main(String[] args) {
         RpcServerNetty rpcServerNetty = new RpcServerNetty();
-        rpcServerNetty.provideServiceInterface(HelloServiceImpl.class);
-        rpcServerNetty.provideServiceInterface(UserServiceImpl.class);
+        rpcServerNetty.provideServiceInterface(new HelloServiceImpl());
+        rpcServerNetty.provideServiceInterface(new UserServiceImpl());
         rpcServerNetty.start();
     }
 }

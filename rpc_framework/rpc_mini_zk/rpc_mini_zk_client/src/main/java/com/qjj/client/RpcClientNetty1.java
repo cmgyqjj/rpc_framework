@@ -1,6 +1,6 @@
 package com.qjj.client;
 
-import com.qjj.client.hander.RpcClientHander;
+import com.qjj.hander.RpcClientHander;
 import com.qjj.common.RpcDecoder;
 import com.qjj.common.RpcEncoder;
 import com.qjj.common.RpcRequest;

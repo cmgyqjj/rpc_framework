@@ -35,6 +35,13 @@ public interface RpcRegistry {
      *@Param:
      *@return:
      *@Author: qjj
+     * 服务发现
+     */
+    RpcRegistryRequest discovery(String className) throws Exception;
+    /**
+     *@Param:
+     *@return:
+     *@Author: qjj
      * 销毁
      */
     void destroy() throws IOException;

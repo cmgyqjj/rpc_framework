@@ -1,6 +1,7 @@
 package com.qjj.common;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import java.io.Serializable;
  * @Description: rpc请求统一包装类
  */
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class RpcRequest implements Serializable {

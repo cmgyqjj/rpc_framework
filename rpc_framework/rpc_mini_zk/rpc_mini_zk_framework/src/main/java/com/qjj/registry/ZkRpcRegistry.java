@@ -3,7 +3,10 @@ package com.qjj.registry;
 import com.qjj.connection.ZkConnection;
 import io.netty.util.internal.ThreadLocalRandom;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
+import org.apache.curator.framework.CuratorFrameworkFactory;
+import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooDefs;
@@ -24,6 +27,16 @@ public class ZkRpcRegistry implements RpcRegistry{
 
     private CuratorFramework zooKeeper;
 
+    public ZkRpcRegistry() {
+        try {
+            ZkConnection zkConnection = new ZkConnection();
+            zooKeeper = zkConnection.getConnection();
+        } catch (IOException e) {
+            log.error("Can't get connection for zookeeper,registryAddress:{}", e);
+            throw new RuntimeException(e);
+        }
+    }
+
     public ZkRpcRegistry(String registryAddr) {
         try {
             ZkConnection zkConnection = new ZkConnection(registryAddr);
@@ -42,7 +55,7 @@ public class ZkRpcRegistry implements RpcRegistry{
                 zooKeeper.create().creatingParentsIfNeeded().withMode(CreateMode.PERSISTENT).forPath("/" + request.getServiceName());
             }
             // 路径地址，一个/代表一个节点
-            String path = "/" + request.getServiceName() +"/"+ request.getServiceAddr();
+            String path = "/" + request.getServiceName() +"/"+ request.getServiceAddr()+":"+request.getServicePort();
             // 临时节点，服务器下线就删除节点
             zooKeeper.create().creatingParentsIfNeeded().withMode(CreateMode.EPHEMERAL).forPath(path);
         } catch (Exception e) {
@@ -59,6 +72,21 @@ public class ZkRpcRegistry implements RpcRegistry{
     public RpcRegistryRequest discovery(RpcRegistryRequest request) throws Exception {
         try {
             List<String> strings = zooKeeper.getChildren().forPath("/" + request.getServiceName());
+            // 这里默认用的第一个，后面加负载均衡
+            String string = strings.get(0);
+            RpcRegistryRequest rpcRegistryRequest = new RpcRegistryRequest();
+            rpcRegistryRequest.setServiceAddr(string);
+            return rpcRegistryRequest;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public RpcRegistryRequest discovery(String className) throws Exception {
+        try {
+            List<String> strings = zooKeeper.getChildren().forPath("/" + className);
             // 这里默认用的第一个，后面加负载均衡
             String string = strings.get(0);
             RpcRegistryRequest rpcRegistryRequest = new RpcRegistryRequest();

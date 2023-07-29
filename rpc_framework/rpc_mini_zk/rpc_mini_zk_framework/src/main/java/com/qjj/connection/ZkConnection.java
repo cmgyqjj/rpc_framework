@@ -46,7 +46,7 @@ public class ZkConnection {
         // zk还会根据minSessionTimeout与maxSessionTimeout两个参数重新调整最后的超时值。默认分别为tickTime 的2倍和20倍
         // 使用心跳监听状态
         this.client = CuratorFrameworkFactory.builder().connectString(this.zkServer)
-                .sessionTimeoutMs(this.sessionTimeout).retryPolicy(policy).namespace("ZkRpc").build();
+                .sessionTimeoutMs(this.sessionTimeout).retryPolicy(policy).namespace("zkRpc").build();
         this.client.start();
         log.info("zookeeper连接成功");
         return this.client;

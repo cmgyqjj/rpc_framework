@@ -84,6 +84,8 @@ public class RpcServerNetty {
                 RpcRegistryRequest rpcRegistryRequest = new RpcRegistryRequest();
                 rpcRegistryRequest.setServiceName(clazz.getName());
 //                rpcRegistryRequest.setServiceVersion("0");
+                rpcRegistryRequest.setServiceAddr("localhost");
+                rpcRegistryRequest.setServicePort(2181);
                 zookeeper.register(rpcRegistryRequest);
                 log.info("注册成功----");
             } catch (Exception e) {

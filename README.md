@@ -31,7 +31,7 @@ further improvement.
 - [ ] Support multiple registry centers
 - [ ] Any other extension or improvement
 
-## Latest Update: July 28, 2023
+## Latest Update: July 29, 2023
 
 If you have any questions, please feel free to raise an issue. 
 If you find this helpful for your learning, would you kindly consider giving it a star? 

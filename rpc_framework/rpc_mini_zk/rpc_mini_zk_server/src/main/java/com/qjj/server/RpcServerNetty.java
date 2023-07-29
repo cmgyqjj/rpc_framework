@@ -78,21 +78,28 @@ public class RpcServerNetty {
             interfaceMap.put(clazz.getName(), service);
             try {
 //                使用注册中心工厂初始化对应的注册中心
-//                TODO 这里应该从外部传入
+//                TODO 这里应该从从配置文件读入
+//                TODO 这个应该可以重复使用吧 maybe?
                 RpcRegistry zookeeper = rpcFactory.getInstance("localhost:2181", "zookeeper");
 //                在注册中心注册服务
                 RpcRegistryRequest rpcRegistryRequest = new RpcRegistryRequest();
                 rpcRegistryRequest.setServiceName(clazz.getName());
 //                rpcRegistryRequest.setServiceVersion("0");
                 rpcRegistryRequest.setServiceAddr("localhost");
-                rpcRegistryRequest.setServicePort(2181);
+//                这里是客户端的服务端口，而不是填zk的地址
+                rpcRegistryRequest.setServicePort(8898);
                 zookeeper.register(rpcRegistryRequest);
-                log.info("注册成功----");
+                log.info("注册成功----"+clazz.getName());
             } catch (Exception e) {
                 log.error("注册失败----");
                 throw new RuntimeException(e);
             }
         }
     }
+
+    public Object getService(String interfaceName){
+        return interfaceMap.get(interfaceName);
+    }
+
 
 }

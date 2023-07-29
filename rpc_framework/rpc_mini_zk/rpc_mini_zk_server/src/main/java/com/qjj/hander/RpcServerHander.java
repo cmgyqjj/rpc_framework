@@ -31,6 +31,8 @@ public class RpcServerHander extends SimpleChannelInboundHandler<RpcRequest> {
         this.interfaceMap=interfaceMap;
     }
 
+
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, RpcRequest req) throws Exception {
         RpcResponse response = new RpcResponse();

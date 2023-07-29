@@ -57,6 +57,7 @@ public class ZkRpcRegistry implements RpcRegistry{
             // 路径地址，一个/代表一个节点
             String path = "/" + request.getServiceName() +"/"+ request.getServiceAddr()+":"+request.getServicePort();
             // 临时节点，服务器下线就删除节点
+//            可以启动后在/zkRpc/类名 下找到对应的地址
             zooKeeper.create().creatingParentsIfNeeded().withMode(CreateMode.EPHEMERAL).forPath(path);
         } catch (Exception e) {
             System.out.println("此服务已存在--");
@@ -86,10 +87,13 @@ public class ZkRpcRegistry implements RpcRegistry{
     @Override
     public RpcRegistryRequest discovery(String className) throws Exception {
         try {
+//            TODO 这里好像会报错，因为有会话过期？
             List<String> strings = zooKeeper.getChildren().forPath("/" + className);
             // 这里默认用的第一个，后面加负载均衡
+//            7.29 再经过上次修改之后，这里已经可以成功找到对应的地址和端口了
             String string = strings.get(0);
             RpcRegistryRequest rpcRegistryRequest = new RpcRegistryRequest();
+//            TODO 这个传递过程还是得找个统一的来规范一下，之前注册的时候ServiceAddr只是地址，但是这里把端口号也带上了，纯粹是懒了
             rpcRegistryRequest.setServiceAddr(string);
             return rpcRegistryRequest;
         } catch (Exception e) {

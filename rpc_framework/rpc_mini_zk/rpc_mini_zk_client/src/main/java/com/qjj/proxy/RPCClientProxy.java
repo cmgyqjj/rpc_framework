@@ -30,6 +30,7 @@ public class RPCClientProxy implements InvocationHandler {
                 .methodName(method.getName())
                 .parameters(args).parameterTypes(method.getParameterTypes()).build();
         RpcResponse response = rpcClientNetty.sendRequest(request);
+//        TODO 这里的处理还有问题，直接返回这个的话，调用方法那边需要一个Integer，会报错
         return response;
     }
     public <T>T getProxy(Class<T> clazz){

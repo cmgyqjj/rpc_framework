@@ -79,17 +79,22 @@ public class RpcClientNetty {
     public RpcResponse sendRequest(RpcRequest request) throws Exception {
         RpcRegistryRequest rpcRegistryRequest = rpcRegistry.discovery(request.getClassName());
         try {
-            ChannelFuture channelFuture = bootstrap.connect(rpcRegistryRequest.getServiceAddr(), rpcRegistryRequest.getServicePort()).sync();
+//            TODO 因为前面没有规范的地址传输，所以这里需要手动做一个分割的操作，后续更改
+            String[] parts = rpcRegistryRequest.getServiceAddr().split(":");
+            String host= parts[0];
+            Integer port= Integer.valueOf(parts[1]);
+            ChannelFuture channelFuture = bootstrap.connect(host,port).sync();
             Channel channel = channelFuture.channel();
             // 发送数据
+            request.setRequestId("test");
             channel.writeAndFlush(request);
             channel.closeFuture().sync();
             // 阻塞的获得结果，通过给channel设计别名，获取特定名字下的channel中的内容（这个在hanlder中设置）
             // AttributeKey是，线程隔离的，不会由线程安全问题。
             // 实际上不应通过阻塞，可通过回调函数，后面可以再进行优化
-            AttributeKey<RpcResponse> key = AttributeKey.valueOf("RpcResponse");
+            AttributeKey<RpcResponse> key = AttributeKey.valueOf("RPCResponse");
             RpcResponse response = channel.attr(key).get();
-            log.info(response.toString());
+            log.info("接受到的消息-------");
             return response;
         } catch (InterruptedException e) {
             e.printStackTrace();

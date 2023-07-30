@@ -31,7 +31,7 @@ public class RPCClientProxy implements InvocationHandler {
                 .parameters(args).parameterTypes(method.getParameterTypes()).build();
         RpcResponse response = rpcClientNetty.sendRequest(request);
 //        TODO 这里的处理还有问题，直接返回这个的话，调用方法那边需要一个Integer，会报错
-        return response;
+        return response.getResult();
     }
     public <T>T getProxy(Class<T> clazz){
         Object o = Proxy.newProxyInstance(clazz.getClassLoader(), new Class[]{clazz}, this);

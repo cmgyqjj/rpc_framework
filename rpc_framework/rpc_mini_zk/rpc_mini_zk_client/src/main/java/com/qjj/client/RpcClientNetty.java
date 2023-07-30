@@ -70,7 +70,8 @@ public class RpcClientNetty {
         Integer id = new Random().nextInt(10);
         RPCClientProxy rpcClientProxy = new RPCClientProxy(this);
         UserService userService = rpcClientProxy.getProxy(UserService.class);
-        userService.getUserByUserId(id);
+        String userByUserId = userService.getUserByUserId(id);
+        log.info("调用的结果是：" + userByUserId);
     }
 
     /**

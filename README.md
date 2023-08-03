@@ -9,7 +9,7 @@ Procedure Call (RPC) frameworks, including:
 3. rpc_mini, a simple RPC call process implemented using only sockets
 4. rpc_mini_netty, a simple RPC call process implemented using only Netty
 5. rpc_min_req_resp, which encapsulates Request and Response classes and adds dynamic proxy and reflection to support calling different methods with different parameters.
-6. rpc_mini_zk, which adds ZooKeeper to implement service registration and discovery on the basis of rpc_mini_req_resp (TODO)
+6. rpc_mini_zk, which adds ZooKeeper to implement service registration and discovery on the basis of rpc_mini_req_resp
 
 
 # Other Work

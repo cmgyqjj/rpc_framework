@@ -26,6 +26,7 @@
     <module>rpc_mini_zk/rpc_mini_zk_server</module>
     <module>rpc_mini_zk/rpc_mini_zk_client</module>
       <module>rpc_mini_zk/rpc_mini_zk_framework</module>
+      <module>netty_base</module>
   </modules>
 
   <name>rpc_framework</name>

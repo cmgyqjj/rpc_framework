@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rpc_qjj_client_framework" />
+        <module name="netty_base" />
+        <module name="rpc_api" />
+        <module name="rpc_qjj_common" />
+        <module name="rpc_tul_framework" />
+        <module name="rpc_mini_zk" />
+        <module name="rpc_tul_api" />
+        <module name="rpc_qjj_framework" />
+        <module name="rpc_mini_zk_server" />
+        <module name="rpc_qjj_client" />
+        <module name="rpc_mini_zk_api" />
+        <module name="rpc_tul_service" />
+        <module name="rpc_mini_zk_client" />
+        <module name="rpc_qjj_server_framework" />
+        <module name="zk_client" />
+        <module name="rpc_zk" />
+        <module name="rpc_mini" />
+        <module name="rpc_easy_framework" />
+        <module name="rpc_tul_client" />
+        <module name="rpc_qjj_api" />
+        <module name="rpc_tul" />
+        <module name="rpc_mini_zk_framework" />
+        <module name="rpc_qjj_server" />
+        <module name="zk_server" />
+        <module name="rpc_mini_zk_common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rpc_mini_client" target="1.8" />
+      <module name="rpc_mini_server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="netty_base" options="-parameters" />
+      <module name="rpc_api" options="-parameters" />
+      <module name="rpc_easy_framework" options="-parameters" />
+      <module name="rpc_mini" options="-parameters" />
+      <module name="rpc_mini_client" options="-parameters" />
+      <module name="rpc_mini_netty" options="" />
+      <module name="rpc_mini_req_resp" options="" />
+      <module name="rpc_mini_server" options="-parameters" />
+      <module name="rpc_mini_zk" options="-parameters" />
+      <module name="rpc_mini_zk_api" options="-parameters" />
+      <module name="rpc_mini_zk_client" options="-parameters" />
+      <module name="rpc_mini_zk_common" options="-parameters" />
+      <module name="rpc_mini_zk_framework" options="-parameters" />
+      <module name="rpc_mini_zk_server" options="-parameters" />
+      <module name="rpc_qjj_api" options="-parameters" />
+      <module name="rpc_qjj_client" options="-parameters" />
+      <module name="rpc_qjj_client_framework" options="-parameters" />
+      <module name="rpc_qjj_common" options="-parameters" />
+      <module name="rpc_qjj_framework" options="-parameters" />
+      <module name="rpc_qjj_server" options="-parameters" />
+      <module name="rpc_qjj_server_framework" options="-parameters" />
+      <module name="rpc_tul" options="-parameters" />
+      <module name="rpc_tul_api" options="-parameters" />
+      <module name="rpc_tul_client" options="-parameters" />
+      <module name="rpc_tul_framework" options="-parameters" />
+      <module name="rpc_tul_service" options="-parameters" />
+      <module name="rpc_zk" options="-parameters" />
+      <module name="zk_client" options="-parameters" />
+      <module name="zk_server" options="-parameters" />
+    </option>
+  </component>
+</project>

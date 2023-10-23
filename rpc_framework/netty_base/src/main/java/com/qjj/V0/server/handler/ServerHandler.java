@@ -1,4 +1,4 @@
-package com.qjj.server.handler;
+package com.qjj.V0.server.handler;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
@@ -23,5 +23,6 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             System.out.println(((ByteBuf)msg).toString(Charset.defaultCharset()));
         }
         ctx.channel().writeAndFlush("msg has recived!");
+        System.out.println(1);
     }
 }

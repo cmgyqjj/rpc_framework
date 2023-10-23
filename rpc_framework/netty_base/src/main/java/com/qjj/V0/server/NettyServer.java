@@ -1,6 +1,6 @@
-package com.qjj.server;
+package com.qjj.V0.server;
 
-import com.qjj.server.handler.ServerHandler;
+import com.qjj.V0.server.handler.ServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -22,11 +22,11 @@ public class NettyServer {
         worker线程组默认启动cpu核心数*2的线程数
          */
         NioEventLoopGroup boosGroup = new NioEventLoopGroup();
-        NioEventLoopGroup workGroup = new NioEventLoopGroup();
+        NioEventLoopGroup workerGroup = new NioEventLoopGroup();
         try{
 //            serverBootstrap是Netty的服务启动辅助类
             ServerBootstrap serverBootstrap = new ServerBootstrap();
-            serverBootstrap.group(boosGroup,workGroup)
+            serverBootstrap.group(boosGroup,workerGroup)
 //                    这里是因为用TCP协议，所以用NioServerSocketChannel
 //                    如果是UDP，用DatagramChannel.class
                     .channel(NioServerSocketChannel.class)
@@ -52,7 +52,7 @@ public class NettyServer {
         }finally {
 //            优雅关闭
             boosGroup.shutdownGracefully();
-            workGroup.shutdownGracefully();
+            workerGroup.shutdownGracefully();
         }
 
     }

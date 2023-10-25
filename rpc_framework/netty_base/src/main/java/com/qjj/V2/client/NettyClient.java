@@ -79,6 +79,7 @@ public class NettyClient {
             String requestStr = JSONObject.toJSONString(request);
 //        在进行单个连接时，future可以静态话，但是在多个连接的情况下，future不可以静态化
             future.channel().writeAndFlush(requestStr);
+//            异步获取响应结果
             Object result = request.get();
             return result;
         }catch (Exception e){

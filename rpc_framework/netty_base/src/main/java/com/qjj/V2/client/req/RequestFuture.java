@@ -1,11 +1,12 @@
 package com.qjj.V2.client.req;
 
-import com.qjj.V0.client.resp.Response;
+import com.qjj.V2.client.resp.Response;
 import lombok.Data;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.locks.Lock;
 
 /**
@@ -25,11 +26,17 @@ public class RequestFuture {
     private Object result;
 //    超时时间，默认5s
     private long timeout=5000;
+
+    private static final AtomicLong aid = new AtomicLong(1);
+
+    public RequestFuture() {
+        this.id = aid.getAndIncrement();
+        addFuture(this);
+    }
 //    把请求放入缓存
     public static void addFuture(RequestFuture future){
         futureMap.put(future.getId(),future);
     }
-
 
     //    同步获取响应结果
     public Object get(){
@@ -46,7 +53,7 @@ public class RequestFuture {
         }
         return this.result;
     }
-    //    异步线程将结果返回到主线程,目前如果服务器跑太慢，超时会发生什么呢？
+    //    异步线程将结果返回到主线程
     public static void receive(Response resp){
        RequestFuture future=futureMap.remove(resp.getId());
         if(future!=null){

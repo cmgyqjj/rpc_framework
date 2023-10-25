@@ -1,6 +1,7 @@
 package com.qjj.V2.client.handler;
 
 import com.alibaba.fastjson.JSONObject;
+import com.qjj.V2.client.req.RequestFuture;
 import com.qjj.V2.client.resp.Response;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -21,6 +22,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         Response response = JSONObject.parseObject(msg.toString(), Response.class);
 //        设置响应结果并唤醒主线程
-        promise.setSuccess(response);
+        RequestFuture.receive(response);
+//        promise.setSuccess(response);
     }
 }

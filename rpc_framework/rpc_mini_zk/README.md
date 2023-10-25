@@ -2,15 +2,14 @@
 
 通过运行RPCServerNetty和RPCClientNetty来模拟RPC调用过程
 
-本例相比较rpc_mini_netty使用netty实现了基础的rpc调用以外
+本例相比较rpc_mini_req_resp使用netty实现了基础的rpc调用以外
 
-还额外添加了统一的Request和Response类
+还额外添加来Zookeeper作为注册中心
 
-为什么需要统一的Request和Response类？
+这是因为在rpc调用过程中，需要调用的方法和需要传输的数据是不确定的
 
-因为在rpc调用过程中，需要调用的方法和需要传输的数据是不确定的
+所以需要提供服务注册和服务发现的功能
 
-所以需要一个通用的类来管理方法和事物
 
 ## TODO List
 

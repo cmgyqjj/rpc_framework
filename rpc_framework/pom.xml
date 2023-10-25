@@ -27,6 +27,11 @@
     <module>rpc_mini_zk/rpc_mini_zk_client</module>
       <module>rpc_mini_zk/rpc_mini_zk_framework</module>
       <module>netty_base</module>
+      <module>rpc_mini_cglib</module>
+    <module>rpc_mini_cglib/rpc_mini_cglib_api</module>
+    <module>rpc_mini_cglib/rpc_mini_cglib_client</module>
+    <module>rpc_mini_cglib/rpc_mini_cglib_server</module>
+    <module>rpc_mini_cglib/rpc_mini_cglib_framework</module>
   </modules>
 
   <name>rpc_framework</name>
@@ -35,7 +40,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.2.4.RELEASE</version>
+    <version>2.7.4</version>
     <relativePath/>
   </parent>
 

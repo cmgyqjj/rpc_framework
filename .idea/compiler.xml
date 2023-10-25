@@ -10,9 +10,11 @@
         <module name="rpc_qjj_client_framework" />
         <module name="netty_base" />
         <module name="rpc_api" />
+        <module name="rpc_mini_cglib_client" />
         <module name="rpc_qjj_common" />
         <module name="rpc_tul_framework" />
         <module name="rpc_mini_zk" />
+        <module name="rpc_mini_cglib_server" />
         <module name="rpc_tul_api" />
         <module name="rpc_qjj_framework" />
         <module name="rpc_mini_zk_server" />
@@ -22,16 +24,19 @@
         <module name="rpc_mini_zk_client" />
         <module name="rpc_qjj_server_framework" />
         <module name="zk_client" />
+        <module name="rpc_mini_cglib_framework" />
         <module name="rpc_zk" />
         <module name="rpc_mini" />
         <module name="rpc_easy_framework" />
         <module name="rpc_tul_client" />
         <module name="rpc_qjj_api" />
+        <module name="rpc_mini_cglib_api" />
         <module name="rpc_tul" />
         <module name="rpc_mini_zk_framework" />
         <module name="rpc_qjj_server" />
         <module name="zk_server" />
         <module name="rpc_mini_zk_common" />
+        <module name="rpc_mini_cglib" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -45,6 +50,11 @@
       <module name="rpc_api" options="-parameters" />
       <module name="rpc_easy_framework" options="-parameters" />
       <module name="rpc_mini" options="-parameters" />
+      <module name="rpc_mini_cglib" options="-parameters" />
+      <module name="rpc_mini_cglib_api" options="-parameters" />
+      <module name="rpc_mini_cglib_client" options="-parameters" />
+      <module name="rpc_mini_cglib_framework" options="-parameters" />
+      <module name="rpc_mini_cglib_server" options="-parameters" />
       <module name="rpc_mini_client" options="-parameters" />
       <module name="rpc_mini_netty" options="" />
       <module name="rpc_mini_req_resp" options="" />

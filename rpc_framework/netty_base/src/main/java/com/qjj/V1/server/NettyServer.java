@@ -67,7 +67,7 @@ public class NettyServer {
                         }
                     });
 //            同步绑定端口
-//            TODO 是否这一步可以放到Pool里面？
+//            TODO 是否这一步的serverBootstrap可以放到Pool里面？
             ChannelFuture future = serverBootstrap.bind(8081).sync();
 //            阻塞主线程，直到Socket通道被关闭
             future.channel().closeFuture().sync();

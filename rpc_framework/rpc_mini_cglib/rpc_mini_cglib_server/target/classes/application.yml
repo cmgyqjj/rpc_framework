@@ -1,0 +1,5 @@
+server:
+  port: 8011
+netty:
+  host: 127.0.0.1
+  port: 7397

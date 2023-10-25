@@ -20,17 +20,27 @@
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_framework_qjj/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_cglib/rpc_mini_cglib_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_cglib/rpc_mini_cglib_api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_cglib/rpc_mini_cglib_client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_cglib/rpc_mini_cglib_framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_cglib/rpc_mini_cglib_server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_cglib/rpc_mini_cglib_server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_cglib/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_netty/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_netty/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_req_resp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_req_resp/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_zk/rpc_mini_zk_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_zk/rpc_mini_zk_api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_zk/rpc_mini_zk_client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_zk/rpc_mini_zk_common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_zk/rpc_mini_zk_common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_zk/rpc_mini_zk_framework/rpc_mini_client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_zk/rpc_mini_zk_framework/rpc_mini_server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_zk/rpc_mini_zk_framework/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_zk/rpc_mini_zk_server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_zk/rpc_mini_zk_server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_mini_zk/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_tul/rpc_tul_api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc_framework/rpc_tul/rpc_tul_api/src/main/resources" charset="UTF-8" />

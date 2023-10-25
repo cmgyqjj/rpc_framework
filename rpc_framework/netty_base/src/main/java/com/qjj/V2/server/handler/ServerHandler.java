@@ -1,7 +1,7 @@
 package com.qjj.V2.server.handler;
 
 import com.alibaba.fastjson.JSONObject;
-import com.qjj.V0.client.req.RequestFuture;
+import com.qjj.V2.client.req.RequestFuture;
 import com.qjj.V2.client.resp.Response;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -29,7 +29,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 //        构建响应结果
         Response response = new Response();
         response.setId(id);
-        response.setResult("服务器响应ok");
+        response.setResult("服务器响应ok"+id);
         ctx.channel().writeAndFlush(JSONObject.toJSONString(response));
     }
 }

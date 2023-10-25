@@ -18,7 +18,6 @@ import io.netty.handler.codec.string.StringEncoder;
  * @create: 2023-10-22 15:00
  * @Description: Netty服务端
  */
-//TODO 使用Apache Commons Pool重构代码，不知道要把什么东西放到Pool里面
 public class NettyServer {
     public static void main(String[] args) {
         /*
@@ -67,7 +66,6 @@ public class NettyServer {
                         }
                     });
 //            同步绑定端口
-//            TODO 是否这一步可以放到Pool里面？
             ChannelFuture future = serverBootstrap.bind(8081).sync();
 //            阻塞主线程，直到Socket通道被关闭
             future.channel().closeFuture().sync();
